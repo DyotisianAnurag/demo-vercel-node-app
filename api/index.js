@@ -9,8 +9,8 @@ app.get('/test', (req, res) => {
     res.send("Hello this is test path");
 })
 
-
-
 app.listen(5000, (req, res) => {
     console.log("Server connected on 5000")
 })
+
+module.exports = app;
