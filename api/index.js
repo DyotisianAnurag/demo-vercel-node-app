@@ -1,16 +1,14 @@
 const express = require("express");
-const app = express()
+const app = express();
+const testRoute = require("../testroute");
 
 
 app.get('/', (req, res) => {
     res.send("Hello this is / path");
 })
-app.get('/test', (req, res) => {
-    res.send("Hello this is test path");
-})
 
-app.listen(5000, (req, res) => {
-    console.log("Server connected on 5000")
-})
+app.use(testRoute);
 
-module.exports = app;
+app.listen(3000, (req, res) => {
+    console.log("Server connected on 3000")
+})
